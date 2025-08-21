@@ -1,10 +1,10 @@
 const Card = ({ name, imgUrl }) => {
   return (
     <div className="card-item">
-      <div className="img-container">
+      <div className="card-img-container">
         <img src={imgUrl} alt={imgUrl} />
       </div>
-      <div className="name">{name}</div>
+      <div className="card-name">{name}</div>
     </div>
   );
 };

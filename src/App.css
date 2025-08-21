@@ -1,6 +1,71 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  min-height: 100vh;
+  background-color: #ffdd0059;
 }
+
+header,
+main {
+  padding: 1rem 2rem;
+}
+/* header */
+header {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main > p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+.score-board {
+  border: 1px black solid;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.cards-container {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.card-item {
+  background-color: #ffdd00d5;
+  height: 250px;
+  width: 250px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.card-img-container {
+  /*border: 1px solid purple;*/
+}
+.card-img-container > img {
+  width: 150px;
+}
+.card-name {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* footer */
