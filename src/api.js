@@ -5,11 +5,13 @@ const fetchData = async () => {
   for (let i = 1; i < 13; i++) {
     const data = await fetch(BASE_URL + i);
     const obj = await data.json();
-    list.push({
-      id: obj.id,
-      name: obj.name,
-      imgUrl: obj.sprites.front_default,
-    });
+    if (!list.some((item) => item.id === obj.id)) {
+      list.push({
+        id: obj.id,
+        name: obj.name,
+        imgUrl: obj.sprites.front_default,
+      });
+    }
   }
 
   return list;

@@ -1,9 +1,8 @@
 import Card from './card.jsx';
 import fetchData from '../api.js';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const Cards = () => {
+const Cards = ({ onCardClick }) => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -23,7 +22,15 @@ const Cards = () => {
   }, []);
 
   const cards = list.map((item) => {
-    return <Card key={item.id} name={item.name} imgUrl={item.imgUrl} />;
+    return (
+      <Card
+        id={item.id}
+        key={item.id}
+        name={item.name}
+        imgUrl={item.imgUrl}
+        onCardClick={onCardClick}
+      />
+    );
   });
 
   return <div className="cards-container">{cards}</div>;

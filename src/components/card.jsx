@@ -1,10 +1,12 @@
-const Card = ({ name, imgUrl }) => {
+const Card = ({ id, name, imgUrl, onCardClick }) => {
   return (
-    <div className="card-item">
-      <div className="card-img-container">
-        <img src={imgUrl} alt={imgUrl} />
+    <div id={id} className="card-item" onClick={onCardClick}>
+      <div id={id} className="card-img-container">
+        <img id={id} src={imgUrl} alt={imgUrl} />
       </div>
-      <div className="card-name">{name}</div>
+      <div id={id} className="card-name">
+        {name}
+      </div>
     </div>
   );
 };
